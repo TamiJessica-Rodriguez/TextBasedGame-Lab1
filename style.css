@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#frame{
+    border: 12px solid black;
+    font-family: 'Sono', sans-serif;
+    height: 30rem;
+    margin-top: 4rem;
+    color: rgb(23, 16, 62);
+    background-image: url(images/frank-mckenna-OD9EOzfSOh0-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 1rem;
+  
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    /* margin-left: 25rem; */
+    /* border: 1px solid white; */
+}
+
+.div-buttons{
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    /* border: 2px solid white; */
+}
+
+.buttons{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0.8;
+    background-color: rgb(23, 16, 62);
+    margin-right: 2rem;
+    margin-left: 2rem;
+    color: white;
+    border: 1px solid white;
+    font-family: 'Sono', sans-serif;
+
+}
+
