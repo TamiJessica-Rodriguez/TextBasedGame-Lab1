@@ -49,7 +49,7 @@ function loadStormScene(){
     button1.style.backgroundColor = "black";
     button2.style.backgroundColor = "black";
 
-    text.textContent = "Nu befinner sig båten mitt i stormens öga och båten börjar att gå sönder. Nicole kan höra men inte se sina två vänner, Trollet och Spöket. Dock är de precis bredvid henne. De har inte förstått att de är osynliga. Spöket har nämligen en hemlig kraft han inte visste fanns och eftersom de har fysisk kontakt blir även Trollet osynlig. "
+    text.textContent = "Nu befinner de sig båten mitt i stormens öga och båten börjar att gå sönder. Nicole kan höra men fortfarande inte se sina två vänner."
     question.textContent = "Vad behöver Nicole och hennes vänner göra för att överleva stormen?";
 
     button1.textContent = "Förbereda livbåten";
@@ -72,13 +72,13 @@ function loadAfterStormScene(){
     button1.style.backgroundColor = "rgb(110, 151, 152)";
     button2.style.backgroundColor = "rgb(110, 151, 152)";
 
-    text.textContent = "Nicole har nu föreberett livbåten men hon ser inte sina vänner. Hon ropar på dem. De ropar på henne men hon kan inte se dem- De sitter redan i livbåten. Nicole springer iväg för att försöka hitta sina vänner. ";
-    question.textContent = " Spöket släpper taget om trollet för att springa efter Nicole. Tillslut ser det varandra, men nu är de för långt bort ifrån livbåten för att hinna tillbaka. De springer allt vad de kan mot livbåten, medan Trollet börjar släppa så att den kan åka ner i havet. ";
+    text.textContent = "De har nu föreberett livbåten. Nicole kommer på att de inte får glömma kartan som visar dem vägen och springer iväg för att hämta den. Henns två vänner väntar nerväst i livbåten och börjar lossa den.";
+    question.textContent = "Nicole hittar kartan tillslut och börja springa mot livbåten, men den börjar lossar helt i förväg och försvinner ner i havet. Vad ska Nicole göra? ";
 
-    button1.textContent = "Hoppa i livbåten";
+    button1.textContent = "Hoppa i havet";
     button1.onclick = toBeContinued;
 
-    button2.textContent = "Alla stannar";
+    button2.textContent = "Stanna kvar";
     button2.onclick = failScene;
 
 }
@@ -92,10 +92,9 @@ function loadAwaitStormScene(){
     const frame = document.getElementById('frame');
     frame.style.backgroundImage = "url('images/frank-mckenna-OD9EOzfSOh0-unsplash.jpg')";
 
-    text.textContent = "De avaktar och kommer på att de kan titta på deras karta och där igenom kanske hitta en alternativ väg. De hittar den alternativ väg och funderar på att ta den."; 
+    text.textContent = "De avaktar och kommer på att de kan titta på deras karta och där igenom kanske hitta en alternativ väg. De hittar en alternativ väg och funderar på att ta den."; 
     question.textContent = "Ska de ta den alternativa vägen eller åka igenom stormen?";
 
-    // button2.style.display = 'none';
     button1.textContent = "Alternativ väg"
     button1.onclick = loadWinScene;
 
@@ -129,10 +128,11 @@ function failScene (){
     const frame = document.getElementById('frame');
     frame.style.backgroundImage = "url('images/storm4.jpeg')";
 
-    text.textContent = "oj, nu gick det inte bra. För att överleva var de tvungna att förbereda livbåten. Försök igen!"; 
+    text.textContent = "Oj, nu gick det inte bra. För att överleva var de tvungna att förbereda livbåten. Försök igen!"; 
     question.textContent = "";
 
     button2.style.backgroundColor = "black";
+    text.style.color = "white";
 
     button1.style.display = 'none';
     button2.textContent = "Börja om";
