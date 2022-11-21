@@ -1,16 +1,26 @@
 window.addEventListener('DOMContentLoaded', main);
 
-/**@type {HTMLParagraphEleemnt} p-tag to display scene message */ 
+/**@type {HTMLButtonElement} sets button for option 1 for user*/ 
+let button1;
+/**@type {HTMLButtonElement} sets button for option 2 for user*/ 
+let button2;
+/**@type {HTMLTextEleemnt} sets upper text for story*/ 
+let text;
+/**@type {HTMLQuestiontextEleemnt} sets questionText for uses*/ 
+let questionText;
+
+
 
 function main(){
     loadStartScene();
 }
 
+// First scene
 function loadStartScene(){
-    const text = document.getElementById('text');
-    const question = document.getElementById('question');
-    const button1 = document.getElementById('option-1');
-    const button2 = document.getElementById('option-2');
+    text = document.getElementById('text');
+    questionText = document.getElementById('question');
+    button1 = document.getElementById('option-1');
+    button2 = document.getElementById('option-2');
 
     const frame = document.getElementById('frame');
     frame.style.backgroundImage = "url('images/joseph-barrientos-oQl0eVYd_n8-unsplash.jpg')";
@@ -35,6 +45,7 @@ function loadStartScene(){
     
 }
 
+// Middle of storm scene
 function loadStormScene(){
     const text = document.getElementById('text');
     const question = document.getElementById('question');
@@ -61,10 +72,10 @@ function loadStormScene(){
 }
 
 function loadAfterStormScene(){
-    const text = document.getElementById('text');
-    const question = document.getElementById('question');
-    const button1 = document.getElementById('option-1');
-    const button2 = document.getElementById('option-2');
+    text = document.getElementById('text');
+    questionText = document.getElementById('question');
+    button1 = document.getElementById('option-1');
+    button2 = document.getElementById('option-2');
 
     const frame = document.getElementById('frame');
     frame.style.backgroundImage = "url('images/image5.jpeg')";
@@ -83,11 +94,12 @@ function loadAfterStormScene(){
 
 }
 
+// Await scene
 function loadAwaitStormScene(){
-    const text = document.getElementById('text');
-    const question = document.getElementById('question');
-    const button1 = document.getElementById('option-1');
-    const button2 = document.getElementById('option-2');
+    text = document.getElementById('text');
+    questionText = document.getElementById('question');
+    button1 = document.getElementById('option-1');
+    button2 = document.getElementById('option-2');
 
     const frame = document.getElementById('frame');
     frame.style.backgroundImage = "url('images/frank-mckenna-OD9EOzfSOh0-unsplash.jpg')";
@@ -103,12 +115,13 @@ function loadAwaitStormScene(){
 
 }
 
+// End scene
 function loadEndScene (){
 
-    const text = document.getElementById('text');
-    const question = document.getElementById('question');
-    const button1 = document.getElementById('option-1');
-    const button2 = document.getElementById('option-2');
+    text = document.getElementById('text');
+    questionText = document.getElementById('question');
+    button1 = document.getElementById('option-1');
+    button2 = document.getElementById('option-2');
 
     text.textContent = "Vill du testa att gå en annan väg?"; 
     question.textContent = "";
@@ -118,12 +131,13 @@ function loadEndScene (){
     button2.onclick = loadStartScene;
 }
 
+// Fail scene
 function failScene (){
 
-    const text = document.getElementById('text');
-    const question = document.getElementById('question');
-    const button1 = document.getElementById('option-1');
-    const button2 = document.getElementById('option-2');
+    text = document.getElementById('text');
+    questionText = document.getElementById('question');
+    button1 = document.getElementById('option-1');
+    button2 = document.getElementById('option-2');
 
     const frame = document.getElementById('frame');
     frame.style.backgroundImage = "url('images/storm4.jpeg')";
@@ -141,13 +155,13 @@ function failScene (){
 
 }
 
+//  To be continued scene
 function toBeContinued(){
 
-    const text = document.getElementById('text');
-    const question = document.getElementById('question');
-    const button1 = document.getElementById('option-1');
-    const button2 = document.getElementById('option-2');
-
+    text = document.getElementById('text');
+    questionText = document.getElementById('question');
+    button1 = document.getElementById('option-1');
+    button2 = document.getElementById('option-2');
 
     const frame = document.getElementById('frame');
     frame.style.backgroundImage = "url('images/image6.webp')";
@@ -164,12 +178,13 @@ function toBeContinued(){
 
 }
 
+// Win scene
 function loadWinScene(){
 
-    const text = document.getElementById('text');
-    const question = document.getElementById('question');
-    const button1 = document.getElementById('option-1');
-    const button2 = document.getElementById('option-2');
+    text = document.getElementById('text');
+    questionText = document.getElementById('question');
+    button1 = document.getElementById('option-1');
+    button2 = document.getElementById('option-2');
 
     button2.style.display = 'none';
 
