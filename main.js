@@ -21,6 +21,8 @@ function loadStartScene(){
     button1.style.display = null;
     text.style.color = null;
     question.style.color = null;
+    button2.style.display = null;
+    
 
     button1.style.backgroundColor = "rgb(23, 16, 62)";
     button2.style.backgroundColor = "rgb(23, 16, 62)";
@@ -90,14 +92,14 @@ function loadAwaitStormScene(){
     const frame = document.getElementById('frame');
     frame.style.backgroundImage = "url('images/frank-mckenna-OD9EOzfSOh0-unsplash.jpg')";
 
-    text.textContent = "De avaktar och kommer på att de kan titta på deras karta och där igenom kanske hitta en alternativ väg. Den alternativa vägen är även den farlig eftersom de måste sova på en ö där det finns osynliga odjur som äter upp en. Odjuren är rädda för eld och därför måste de hitta pinnar och tändare. "; 
-    question.textContent = "Vad måsre de ta med sig från båten för att överleva?";
+    text.textContent = "De avaktar och kommer på att de kan titta på deras karta och där igenom kanske hitta en alternativ väg. De hittar den alternativ väg och funderar på att ta den."; 
+    question.textContent = "Ska de ta den alternativa vägen eller åka igenom stormen?";
 
-    // button1.style.display = 'none';
-    button1.textContent = "Pinnar & Tändare"
+    // button2.style.display = 'none';
+    button1.textContent = "Alternativ väg"
     button1.onclick = loadWinScene;
 
-    button2.textContent = "Pinnar";
+    button2.textContent = "Styr mot stormen";
     button2.onclick = failScene;
 
 }
@@ -169,6 +171,7 @@ function loadWinScene(){
     const button1 = document.getElementById('option-1');
     const button2 = document.getElementById('option-2');
 
+    button2.style.display = 'none';
 
     const frame = document.getElementById('frame');
     frame.style.backgroundImage = "url('images/beach.jpeg')";
@@ -179,9 +182,10 @@ function loadWinScene(){
     text.style.color = "black";
     button2.style.color = "white";
     button2.style.backgroundColor = "black";
-    button1.style.display = 'none';
-    button2.textContent = "Börja om";
-    button2.onclick = loadStartScene;
+    button1.textContent = "Börja om";
+    button1.onclick = loadStartScene;
+
+  
 
 }
 
