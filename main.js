@@ -2,7 +2,6 @@ window.addEventListener('DOMContentLoaded', main);
 
 /**@type {HTMLParagraphEleemnt} p-tag to display scene message */ 
 
-
 function main(){
     loadStartScene();
 }
@@ -48,8 +47,8 @@ function loadStormScene(){
     button1.style.backgroundColor = "black";
     button2.style.backgroundColor = "black";
 
-    text.textContent = "Nu befinner sig båten mitt i stormens öga och båten börjar att gå sönder. Nicole kan höra men inte se sina två vänner, Trollet och Spöket. Dock är dem precis bredvid henne och kramar om varandra av rädlsa samtidigt som de ropar hennes namn. De har inte förstått att de är osynliga. Spöket har nämligen en hemlig kraft hen inte visste fanns och eftersom de har fysisk kontakt blir även Trollet osynlig på grund av detta. "
-    question.textContent = "Nicole kan förbereda livbåten eller bli omfamnad av sina vänner. Vad behöver Nicole och hennes vänner göra för att överleva stormen?";
+    text.textContent = "Nu befinner sig båten mitt i stormens öga och båten börjar att gå sönder. Nicole kan höra men inte se sina två vänner, Trollet och Spöket. Dock är de precis bredvid henne. De har inte förstått att de är osynliga. Spöket har nämligen en hemlig kraft han inte visste fanns och eftersom de har fysisk kontakt blir även Trollet osynlig. "
+    question.textContent = "Vad behöver Nicole och hennes vänner göra för att överleva stormen?";
 
     button1.textContent = "Förbereda livbåten";
     button1.onclick = loadAfterStormScene;
@@ -87,18 +86,19 @@ function loadAwaitStormScene(){
     const question = document.getElementById('question');
     const button1 = document.getElementById('option-1');
     const button2 = document.getElementById('option-2');
-    // const picture = document.querySelector('#frame');
 
     const frame = document.getElementById('frame');
     frame.style.backgroundImage = "url('images/frank-mckenna-OD9EOzfSOh0-unsplash.jpg')";
 
-    text.textContent = "De avaktar och kommer på att de kan titta på deras karta och där igenom kanske hitta en alternativ väg. När de tittar och studerar kartan inser de att det finns en väg som går ännu snabbare än den beskrivning de fått innan. Och de bästa av att de slipper åka igenom stormen."; 
-    question.textContent = "Stort grattis! Nu kommer de fram snabbare tack vara dig.";
+    text.textContent = "De avaktar och kommer på att de kan titta på deras karta och där igenom kanske hitta en alternativ väg. Den alternativa vägen är även den farlig eftersom de måste sova på en ö där det finns osynliga odjur som äter upp en. Odjuren är rädda för eld och därför måste de hitta pinnar och tändare. "; 
+    question.textContent = "Vad måsre de ta med sig från båten för att överleva?";
 
-    button1.style.display = 'none';
+    // button1.style.display = 'none';
+    button1.textContent = "Pinnar & Tändare"
+    button1.onclick = loadWinScene;
 
-    button2.textContent = "Avsluta";
-    button2.onclick = loadEndScene;
+    button2.textContent = "Pinnar";
+    button2.onclick = failScene;
 
 }
 
@@ -151,6 +151,29 @@ function toBeContinued(){
     frame.style.backgroundImage = "url('images/image6.webp')";
 
     text.textContent = "Fortsättning följer....."; 
+    question.textContent = "";
+
+    text.style.color = "black";
+    button2.style.color = "white";
+    button2.style.backgroundColor = "black";
+    button1.style.display = 'none';
+    button2.textContent = "Börja om";
+    button2.onclick = loadStartScene;
+
+}
+
+function loadWinScene(){
+
+    const text = document.getElementById('text');
+    const question = document.getElementById('question');
+    const button1 = document.getElementById('option-1');
+    const button2 = document.getElementById('option-2');
+
+
+    const frame = document.getElementById('frame');
+    frame.style.backgroundImage = "url('images/beach.jpeg')";
+
+    text.textContent = "Stort grattis! De överlevde"; 
     question.textContent = "";
 
     text.style.color = "black";
